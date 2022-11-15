@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="stylesheets/login.css">
+        <!-- jquery -->
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    </head>
+<body>
+    <div class="content_wrap">
+         <!--메인 배경 이미지  -->
+        <div id="main_uper" >
+        </div>
+        <!-- 로그인 창 -->
+        <div id = "login_wrap">
+            <!-- 로고  -->
+            <div><img src="image/gobacklogo.png" width="80px" height="80px" ></div>
+            <!-- 플랫폼 명 -->
+            <div id="title_wrap">
+                <div id="main_title">DonGam</div>
+                <div id="kor_title">병충해 진단 플랫폼</div>
+                <div id="eng_title">Dongam Data Platform</div>
+            </div>
+            <form method="post" action="/user/login">
+                <!-- ID -->
+                <div id="login_text"><input type="text" id="user_id" name="id" placeholder="ID" onkeyup="if(window.event.keyCode==13){login()}"/></div>
+                <!-- PW -->
+                <div><input type="password" id="user_password" name="password" placeholder="Password" onkeyup="if(window.event.keyCode==13){login()}"/></div>
+                <!-- 버튼  -->
+                <div id="button_group">
+                    <button type="button" class="btn-1" onclick="location.href='join'">회원가입</button>&nbsp;&nbsp;
+                    <button type="submit" id="login_btn">로그인</button>
+                </div>
+            </form>
+
+            <div id="login_footer">© Copyright <span style="font-weight: bold;">Goback</span> All Rights Reserved</div>
+
+
+        </div>
+    </div>
+
+
+    <!-- js -->
+    <script src="js/login.js"></script>
+</body>
+</html>

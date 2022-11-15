@@ -1,0 +1,111 @@
+  html, body{
+    overflow:hidden;
+  }
+
+  .write_diary {
+    background-color: #ffffff;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    width: 75.8%;
+    min-width: 1000px;
+    height: 90%;
+    min-height: 770px;
+
+  }
+
+  #close {
+    position: absolute;
+    bottom: 70px;
+    right: 100px;
+  }
+
+  .diary_left{
+      width: 55%;
+      height: 100%;
+      float: left;
+  }
+
+  .diary_right{
+      width: 45%;
+      height: 100%;
+      float: left;
+  }
+
+  #diary_table{
+      top:12%;
+      left: 5%;
+      position: absolute;
+      width: 45%;
+    }
+    
+ .th_name {
+     padding-top: 17px;
+     text-align: left;
+     vertical-align : top;
+     width: 90px;
+  }
+  
+  .th_right{
+     text-align: left;
+  }
+  .th_textarea{
+      width: 90%;
+      height: 100px;
+      resize: none;
+  }
+
+  .th_text, textarea {
+	width:55%;
+	border:2px solid #aaa;
+	border-radius:4px;
+	margin: 8px 0;
+	outline: none;
+	padding:8px;
+	box-sizing: border-box;
+	transition:.3s;
+    font-size: 15px;
+}
+
+.th_text:focus, textarea:focus {
+	border-color:dodgerBlue;
+	box-shadow:0 0 8px 0 dodgetBlue;
+}
+
+.th_text{
+  width: 70%;
+}
+
+.img_zone{
+    padding-top: 30%;
+    width: 100%;
+}
+
+#diary_img {
+    width: 90%;
+    height: 70%;
+    border: 2px solid gray;
+}
+
+.diary_check{
+  /* margin-left: 50px; */
+}
+
+#close{
+	width:77px;
+	height: 35px;
+	color:#fff;
+	background: #407cfd;
+	font-size: 16px;
+	border:none;
+	border-radius: 5px;
+	box-shadow: 0 4px 16px rgba(94, 144, 252, 0.3);
+	transition:0.3s;
+}
+#close:focus {
+	outline:0;
+}
+#close:hover{
+	background: rgba(0,79,255,0.9);
+	cursor: pointer;
+	box-shadow: 0 2px 4px rgba(0,79,255,0.6);
+}

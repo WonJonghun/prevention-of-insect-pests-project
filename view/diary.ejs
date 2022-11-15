@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="stylesheets/framework.css">
+        <link rel="stylesheet" href="stylesheets/diary.css">
+    </head>
+<body>
+    <!-- 상단바 -->
+    <div class="menu" >
+        <!-- 로고  -->
+        <div id="logo"><img src="image/gobacklogo.png" width="85px" height="80px" ></div>
+        <nav class="clearfix">
+            <ul class="clearfix">
+                <li><a href="main">메인메뉴</a></li>
+                <li><a href="diary">일지작성</a></li>
+                <li><a href="">농작물 정보</a></li>
+                <li><a href="">병·해충 진단</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="backmenu"></div>
+    
+    <!-- 컨텐츠 -->
+    <div class="content_wrap">
+
+      <!-- 일지 작성 -->
+      <div class="write_diary">
+        <div class="diary_left">
+          <!-- 테이블 -->
+          <table id="diary_table">
+            <tbody>
+              <tr>
+                <th class="th_name">날짜</th>
+                <th class="th_right"><input type="date" class="th_text"></th>
+                <th class="th_right"><input type="checkbox" class="diary_check" name="" value="">수확완료</th>
+              </tr>
+              <tr>
+                <th class="th_name">날씨</th>
+                <th class="th_right"><input type="text" class="th_text"></th>
+                <th class="th_right"><input type="checkbox" class="diary_check" name="" value="">민팅서비스 요청</th>
+              </tr>
+              <tr>
+                <th class="th_name">작물 상태</th>
+                <th class="th_right" colspan="2"><textarea  class="th_textarea"></textarea></th>
+              </tr>
+              <tr>
+                <th class="th_name">밭의 상태</th>
+                <th class="th_right" colspan="2"><textarea  class="th_textarea"></textarea></th>
+              </tr>
+              <tr>
+                <th class="th_name">오늘 한일</th>
+                <th class="th_right" colspan="2"><textarea  class="th_textarea"></textarea></th>
+              </tr>
+              <tr>
+                <th class="th_name">차후 계획</th>
+                <th class="th_right" colspan="2"><textarea  class="th_textarea"></textarea></th>
+              </tr>
+              <tr>
+                <th class="th_name">추가 항목</th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="diary_right">
+          <!-- 이미지 -->
+          <div class="img_zone"><img src="../image/yellow_main.jpg" alt="My Image" id="diary_img"></div>
+        </div>
+        <button id="close">팝업닫기</button>
+      </div>
+        
+    </div>
+
+    <!-- 챗봇 섹션 -->
+    <div id="chatbot_section">
+        <div id="chatbot_header">병해충 진단 챗봇</div>
+        <input type="text" id="chat_text" placeholder="내용을 입력해주세요"/>
+        <button type="button" id="chat_send">전송</button>
+    </div>
+
+</body>
+</html>

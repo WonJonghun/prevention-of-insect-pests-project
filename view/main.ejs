@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+    <head>
+      <link rel="stylesheet" href="stylesheets/framework.css">
+      <link rel="stylesheet" href="stylesheets/main.css">
+    </head>
+<body>
+  {% if user %}
+  <!-- <a href="/process/logout">Logout</a> -->
+    <!-- 상단바 -->
+    <div class="menu" >
+        <!-- 로고  -->
+        <div id="logo"><img src="image/gobacklogo.png" width="85px" height="80px" ></div>
+        <nav class="clearfix">
+            <ul class="clearfix">
+                <li><a href="main">메인메뉴</a></li>
+                <li><a href="diary">일지작성</a></li>
+                <li><a href="">농작물 정보</a></li>
+                <li><a href="">병·해충 진단</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="backmenu"></div>
+    
+    <!-- 컨텐츠 -->
+    <div class="content_wrap">
+        
+        <!-- 날씨, 재배정보, 공지사항 섹션 -->
+        <div id="info_section">
+            <div id="weather" class="radibox"><!-- weather widget start --><img src="https://w.bookcdn.com/weather/picture/32_42025_1_24_ecf0f1_250_bdc3c7_9da2a6_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=593&anc_id=36325"  alt="booked.net"/></a><!-- weather widget end --></div>
+            <div id="culti_info" class="radibox">
+                재배정보
+                <p>감자를 키웠다</p>
+                <p>감자에 물을 줬다</p>
+                <p>맛있게 먹었다</p>
+            </div>
+            <div id="notice" class="radibox">
+                공지사항
+                <p>출근시간 09:30</p>
+                <p>퇴근시간 18:30</p>
+            </div>
+        </div>
+
+        <!-- 재배내용 섹션 -->
+        <div id="culti_section">
+            <select id="page_range">
+                <option>페이지당 10건 표시</option>
+                <option>페이지당 20건 표시</option>
+                <option>페이지당 30건 표시</option>
+                <option>페이지당 40건 표시</option>
+            </select>
+            <!-- 테이블 -->
+            <table>
+                <thead>
+                  <tr>
+                    <th id="th1"><input type="checkbox" name="" value=""></th>
+                    <th id="th2">내용</th>
+                    <th id="th3">작성일</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><input type="checkbox" name="" value=""></td>
+                    <td class="tr_modal">물을 주고 잡초 제거</td>
+                    <td>2022-09-16 11:48</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+
+    <!-- 챗봇 섹션 -->
+    <div id="chatbot_section">
+        <div id="chatbot_header">병해충 진단 챗봇</div>
+        <input type="text" id="chat_text" placeholder="내용을 입력해주세요"/>
+        <button type="button" id="chat_send">전송</button>
+    </div>
+
+
+    <!-- 모달 팝업 -->
+    <div class="background">
+      <div class="window">
+        <div class="popup">
+          <div class="popup_header">0000년 00월 00일 000님 재배일지</div>
+          <div class="popup_left">
+            <!-- 팝업 테이블 -->
+            <table id="popup_table">
+              <tbody>
+                <tr>
+                  <th class="th_name">날짜</th>
+                  <th class="th_right"><input type="text" class="th_text" readonly disabled></th>
+                </tr>
+                <tr>
+                  <th class="th_name">날씨</th>
+                  <th class="th_right"><input type="text" class="th_text" readonly disabled></th>
+                </tr>
+                <tr>
+                  <th class="th_name">작물 상태</th>
+                  <th class="th_right"><textarea  class="th_textarea" readonly disabled></textarea></th>
+                </tr>
+                <tr>
+                  <th class="th_name">밭의 상태</th>
+                  <th class="th_right"><textarea  class="th_textarea" readonly disabled></textarea></th>
+                </tr>
+                <tr>
+                  <th class="th_name">오늘 한일</th>
+                  <th class="th_right"><textarea  class="th_textarea" readonly disabled></textarea></th>
+                </tr>
+                <tr>
+                  <th class="th_name">차후 계획</th>
+                  <th class="th_right"><textarea  class="th_textarea" readonly disabled></textarea></th>
+                </tr>
+                <tr>
+                  <th class="th_name">추가 항목</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="popup_right">
+            <!-- 팝업 이미지 -->
+            <div class="img_zone"><img src="../image/yellow_main.jpg" alt="My Image" id="popup_img"></div>
+          </div>
+          <button id="close">팝업닫기</button>
+        </div>
+      </div>
+    </div>
+    {% else %}
+    <h2>로그인을 부탁드립니다</h2>
+    {% endif %}
+    <!-- script -->
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- css -->
+        <link rel="stylesheet" href="stylesheets/join.css">
+        <!-- jquery -->
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    </head>
+<body>
+    <div class="content_wrap">
+         <!--메인 배경 이미지  -->
+        <div id="main_uper" >
+        </div>
+        <!-- 회원가입 창 -->
+        <div id = "join_wrap">
+            <div id="title_wrap">
+                <div id="main_title">회원 가입</div>
+            </div>
+            <!-- 정보입력 -->
+            <div id="userdata_warp">
+            <div>
+                <input type="text" id="join_id" placeholder="ID (5자 이상 15자 이하 영문/숫자)" oninput="handleOnInput(this)" maxlength='15'/><button type="button" id="id_check">중복확인</button>
+                <img src="image/check.png" id="check_img" width="30px" height="30px" >
+            </div>
+            <div><input type="password" id="join_pass" placeholder="Password" maxlength='30'/></div>
+            <div><input type="text" id="join_name" placeholder="이름" onKeyPress="hangul();" maxlength='10'/></div>
+            <div>
+                <select name="sido1" id="sido1"></select>
+                <select name="gugun1" id="gugun1"></select>
+            </div>
+            <div><input type="text" id="join_crop" placeholder="재배 작물" maxlength='15'/></div>
+            <div><input type="date" id="join_startdate" data-placeholder="재배 시작일" style="font-family : 'Nanum Gothic'; color:gray;" required aria-required="true" value={startDateValue} className={styles.selectDay} onChange={StartDateValueHandler}/></div>
+            <!-- 버튼  -->
+            <div id="button_group">
+                <button type="button" class="btn-1" onclick="location.href='/'">취소</button>&nbsp;&nbsp;
+                <button type="button" id="join_btn">가입하기</button>
+            </div>
+
+            <div id="login_footer">© Copyright <span style="font-weight: bold;">Goback</span> All Rights Reserved</div>
+            
+        </div>
+    </div>
+
+    <!-- js -->
+    <script src="js/join.js"></script>
+</body>
+</html>
